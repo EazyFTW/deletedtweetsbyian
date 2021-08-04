@@ -15,7 +15,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from pymongo import MongoClient
-mongo = MongoClient('<mongodb+srv://Henboy:<21jPzi3zFEvClGnv>@cluster0.rlxx6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority>')
+mongo = MongoClient('mongodb+srv://Henboy:21jPzi3zFEvClGnv>@cluster0.rlxx6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 db_counter = mongo.db.counter
 find = db_counter.find_one({'deleted': {'$exists': True}})
 if not find: db_counter.insert_one({'deleted': 0, 'since': datetime.now()})
