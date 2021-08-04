@@ -54,6 +54,19 @@ section:first-of-type>div {
     transform: translateY(28px);
 }
 
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /*! transform: translateX(-50%); */
+    font-size: 13px;
+    left: 2%;
+}
+
+.bottom a {
+    color: #15465e;
+}
+
 @media screen and (max-height: 580px) {
     section:first-of-type {
         transform: translate(-50%, -50%);
