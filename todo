@@ -1,0 +1,32 @@
+☐ Install Git from https://git-scm.com/downloads (you can uninstall it after these stages if you want)
+
+Step 1:
+☐ Make a new Github repository
+☐ Uzip and open Open PowerShell in the directory you have unzipped
+☐ Type the text below to upload the files in the directory to github (replace <GITHUB LINK HERE> with the repository link you made):
+git config --global user.name "your_username"
+git config --global user.email "your_email_address@example.com"
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin <GITHUB LINK HERE>
+git push -u origin main
+
+
+Step 2 (Heroku part):
+    ☐ Make a new app on Heroku
+    ☐ Go into 'Deploy' -> click on 'Connect to GitHub', then search the repo(sitory) in the box below that and connect
+    ☐ Click on 'Edit Automatic Deploys' so the website code will be updated automatically when you update the code on Github
+    ☐ Add this key and value to config vars under 'Settings' -> 'Reveal Config Vars':
+        CHROMEDRIVER_PATH   /app/.chromedriver
+    ☐ Add these build packs under 'Settings' -> Add 'Buildpacks':
+        heroku/python
+        https://github.com/heroku/heroku-buildpack-google-chrome
+        https://github.com/heroku/heroku-buildpack-chromedriver
+    ☐ In 'Deploy', click on 'Deploy Branch' at the bottom and wait untill it's finished
+    ☐ If it's not on, turn on page under 'Resources'
+    ☐ Click 'more' at the top right then 'view logs', then wait untill you see something like 'The website is up ＼（＾○＾）／' then click on 'Open app'
+    - Done
+
+- After this is done, if you want to update the code, just update it on Github, and wait a few minutes for Heroku to also automatically update and done.
