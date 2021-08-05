@@ -24,7 +24,7 @@ find = db_counter.find_one({'deleted': {'$exists': True}})
 app = Flask(__name__)
 twitter_link = 'https://twitter.com/rendersbyian'
 
-count, deleted, since, seconds = 0, find['deleted'], find['since'].strftime('%A, %B %d %Y'), 30
+count, deleted, since, seconds = 0, find['deleted'], find['since'].strftime('%A, %B %d %Y'), 15
 CHROMEDRIVER_PATH = fr'{getenv("CHROMEDRIVER_PATH")}/bin/chromedriver'
 
 options = Options()
