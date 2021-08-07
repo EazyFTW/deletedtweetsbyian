@@ -43,10 +43,10 @@ section:first-of-type>div {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: rgba(34, 110, 147, 1);
+    color: #7D7D7D;
     font-family: helvetica, sans-serif;
     font-size: 34pt;
-    font-weight: bold;
+    font-weight: heavy;
     letter-spacing: 0.5px;
     line-height: 1.2;
     font-size: 150pt;
