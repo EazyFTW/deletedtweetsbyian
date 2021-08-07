@@ -67,6 +67,18 @@ section:first-of-type>div {
     color: #15465e;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #272727;
+    }
+    .text, .digit, .bottom {
+        color: #fff;
+    }
+    .bottom a {
+        color: #afe3fd;
+    }
+}
+
 @media screen and (max-height: 580px) {
     section:first-of-type {
         transform: translate(-50%, -50%);
